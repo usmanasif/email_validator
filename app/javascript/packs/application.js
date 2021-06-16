@@ -9,3 +9,12 @@ import "channels"
 
 Rails.start()
 Turbolinks.start()
+
+import Jquery from 'jquery'
+import 'popper.js'
+import 'css/site'
+import toastr from 'toastr'
+
+window.toastr = toastr;
+window.Jquery = Jquery;
+window.$ = Jquery;
