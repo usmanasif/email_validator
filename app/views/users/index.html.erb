@@ -1,0 +1,21 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-4 offset-4'>
+      <%= render 'form' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 offset-4">
+      <h3>Results</h3>
+      <span id="user_lists" class="font-weight-bold">
+        <% @users.each do |user| %>
+          <div id="<%= user.id %>" class="mt-2">
+            <label><%= user.email %></label>
+            <span class='float-right'>(<%= user.name %>)</span>
+          </div>
+        <% end %>
+      </span>
+    </div>
+  </div>
+</div>

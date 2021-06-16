@@ -1,0 +1,15 @@
+<% status = @response[:status] %>
+
+<% if status == 200 %>
+  <% user = @response[:user] %>
+
+  $('<%= "#user_lists ##{user.id}" %>').remove()
+
+  $('#user_lists').prepend("<div class='mt-2'><label><%= user.email %></label> <span class='float-right'>(<%= user.name %>)</span></div>")
+
+  toastr.success('<%= "This email #{user.email} has been generated and added in the list for this contact" %>')
+<% end %>
+
+<% if status != 200 %>
+  toastr.error('<%= @response[:error] %>')
+<% end %>

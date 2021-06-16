@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for User.new, remote: true do |f| %>
+      <h2>E-mail Validator</h2>
+      <div class="form-group my-3">
+        <%= f.label :first_name, 'First Name' %>
+        <%= f.text_field :first_name, placeholder: 'Enter first name', class: 'form-control mt-2', required: true %>
+      </div>
+
+      <div class="form-group my-3">
+        <%= f.label :last_name, 'Last Name' %>
+        <%= f.text_field :last_name, placeholder: 'Enter last name', class: 'form-control mt-2', required: true %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :url, 'URL' %>
+        <%= f.text_field :url, placeholder: 'Enter url', class: 'form-control mt-2', required: true %>
+      </div>
+
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="form-group my-3">
+        <%= f.submit 'Search', class: 'form-control btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>
