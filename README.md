@@ -90,6 +90,7 @@ rails test
 ### Gems
 - Used http_party gem to connect with MailBoxLayer api
 - Used dotenv-rails gem to handle environment variable for development and test
+- Will-paginate: Added this gem use pagination while displaying validated email lists on page
 
 ### Plugins
 - Bootstrab: Used it for styling
@@ -98,7 +99,11 @@ rails test
 ### Workflow and functionality
 - On web app main page users can enter first_name, last_name and url.  The validated email lists will be shown on page and it will be updated without reloading when user will search for validated email.  If existing one searched again, it will be moved to top
 
+- Implemented pagination on email list show page. For now, I have added a limit of 5 email per page and then pagination will be shown
+
 
 #### Note
-As I was using Free version of  MailBoxLayer api so I added a delay of 1 seconds between each request sent to the api. Otherwise it's giving MaxRateLimit error due limitation of free account.
+- As I was using Free version of  MailBoxLayer api so I added a delay of 1 seconds between each request sent to the api. Otherwise it's giving MaxRateLimit error due limitation of free account.
+
+- When the user enter the contact details, For now, I am only generating 6 possible combination as mentioned in the assignment. I think it can be dynamic and we can have many other possible combinations which can be generated and validated
 

@@ -1,12 +1,12 @@
-<div class='container'>
-  <div class='row'>
-    <div class='col-md-4 offset-4'>
+<div class='container mt-4'>
+  <div class='row justify-content-center'>
+    <div class='col-md-4'>
       <%= render 'form' %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-4 offset-4">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
       <h3>Results</h3>
       <span id="user_lists" class="font-weight-bold">
         <% @users.each do |user| %>
@@ -16,6 +16,8 @@
           </div>
         <% end %>
       </span>
+
+      <%= will_paginate(@users, class: 'pagination-lg mt-5') %>
     </div>
   </div>
 </div>
