@@ -1,6 +1,6 @@
 # E-Mail Validator
 
- E-Mail Validator is an application that lets users find valid email addresses based on the contact's name and url.
+ E-Mail Validator is an application that lets users find valid email addresses based on the contact's name and URL.
 
 example:
 first_name: Ben
@@ -48,13 +48,14 @@ cd email_validator
 bundle install
 ```
 
-### Configure Enviroment Variables
+#### Configure Environment Variables
 
 ```
  cp .env.exampe .env
 ```
 
-Update the following ENV variables required for database connection and  to connect with MailBoxLayer api
+Update the following ENV variables required for database connection and to connect with MailBoxLayer API
+
 
 ```
 MAIL_BOX_LAYER_ACCESS_KEY=e412e9c540ba6aaed4739c05ddca0cb8
@@ -78,8 +79,8 @@ DB_PASSWORD=postgres_password
 rails server
 ```
 
-it will run the app on this url. Visit it and you can play with it
-http://localhost:3000/
+it will run the app on this URL. Visit it and you can play with it http://localhost:3000/
+
 
 * How to run the test suite
 
@@ -88,22 +89,21 @@ rails test
 ```
 
 ### Gems
-- Used http_party gem to connect with MailBoxLayer api
+- Used http_party gem to connect with MailBoxLayer API
 - Used dotenv-rails gem to handle environment variable for development and test
 - Will-paginate: Added this gem use pagination while displaying validated email lists on page
 
 ### Plugins
-- Bootstrab: Used it for styling
+- Bootstrap: Used it for styling
 - Toastr: Used it to show success/failure notifications
 
 ### Workflow and functionality
-- On web app main page users can enter first_name, last_name and url.  The validated email lists will be shown on page and it will be updated without reloading when user will search for validated email.  If existing one searched again, it will be moved to top
+- On the web app, main page users can enter first_name, last_name, and URL. The validated email lists will be shown on the page and they will be updated without reloading when the user will search for validated email. If the existing one searched again, it will be moved to the top.
 
-- Implemented pagination on email list show page. For now, I have added a limit of 5 email per page and then pagination will be shown
+- Implemented pagination on the email list show page. For now, I have added a limit of 5 emails per page and then pagination will be shown
 
 
 #### Note
-- As I was using Free version of  MailBoxLayer api so I added a delay of 1 seconds between each request sent to the api. Otherwise it's giving MaxRateLimit error due limitation of free account.
+- As I was using the Free version of MailBoxLayer API so I added a delay of 1 second between each request sent to the API. Otherwise, it's giving MaxRateLimit error due to the limitation of the free account.
 
-- When the user enter the contact details, For now, I am only generating 6 possible combination as mentioned in the assignment. I think it can be dynamic and we can have many other possible combinations which can be generated and validated
-
+- When the user enters the contact details, For now, I am only generating 6 possible combinations as mentioned in the assignment. I think it can be dynamic and we can have many other possible combinations which can be generated and validated
